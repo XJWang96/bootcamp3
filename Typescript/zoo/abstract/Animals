@@ -1,0 +1,45 @@
+interface IAnimal {
+    nom: string;
+    age: number;
+    type: string;
+    FaireBruit(): void;
+}
+
+export default abstract class Animal implements IAnimal {
+    private _nom: string;
+    private _age: number;
+    private _type: string;
+  
+    constructor(nom: string, age: number, type: string) {
+        this.nom = nom;
+        this.age = age;
+        this.type = type;
+    }
+    get nom(): string {
+        return this._nom;
+    }
+    
+    set nom(value: string) {
+        this._nom = value;
+    }
+    
+    get age(): number {
+        return this._age;
+    }
+    
+    set age(value: number) {
+        this._age = value;
+    }
+    
+    get type(): string {
+        return this._type;
+    }
+    
+    set type(value: string) {
+        this._type = value;
+    }
+
+    FaireBruit(): void {
+      console.log(`${this.nom} a fait bruit`);
+    }
+}

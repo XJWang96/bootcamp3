@@ -1,0 +1,7 @@
+import Animal from './abstract/Animals';
+
+export class Girafe extends Animal {
+  constructor(nom: string, age: number) {
+    super(nom, age, "Girafe");
+  }
+}
